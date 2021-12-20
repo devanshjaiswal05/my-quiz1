@@ -8,18 +8,18 @@ class Contestant {
   getCount(){
     var contestantCountRef = database.ref('contestantCount');
 
-     contestantCountRef.on("value",(data)=>{
-      contestantCount = data.val();
-     })
+      contestantCountRef.on("value",(data)=>{
+       contestantCount = data.val();
+      })
 
 
      //contestantCountRef.on("value",()=>{
      //  contestantCount = data.val();
      //})
 
-    // contestantCountRef.on("value",(data)=>{
-    //   contestantCount = data();
-    // })
+     // contestantCountRef.on("value",(data)=>{
+     //   contestantCount = data();
+     // })
 
   }
 
@@ -39,9 +39,9 @@ class Contestant {
     // });
 
 
-    //database.ref('/').update({
-    //  contestantCount: count
-    //});
+    database.ref('/').update({
+      contestantCount: count
+    });
 
   }
 
